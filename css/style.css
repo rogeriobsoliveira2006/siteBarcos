@@ -39,6 +39,21 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
   float: left;
   width: 100%;
 }
+.loadmore{
+  background: none;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+}
+.loadmore:hover{
+  color: #a70606;
+  border: 1px solid #a70606;
+}
 
 /**
 * * BOX
@@ -134,9 +149,15 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
   width: 100%;
   padding-top: 25px;
   z-index: 6;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
 }
 .header .logo img{
   max-width: 150px;
+}
+.header.fixed{
+  background: #2c3e50;
+  padding: 10px 0 5px 0;
 }
 
 /**
@@ -237,6 +258,7 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
   .nav-toggle{
     color: #fff;
     font-size: 22px;
+    margin-top: 15px;
   }
   .nav-close{
     font-size: 22px;
@@ -278,14 +300,14 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
 /**
 * * BREACKPOINTS MÍNIMOS
 */
-@media(min-width: 768px){/* De 768 em diante faz isso...*/
+@media(min-width: 768px){/* De 768 até 900 faz isso...*/
   /*Menu*/
   .nav-toggle, .nav-close{
     display: none;
   }
   .header .nav{
     float: right;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .header .nav ul li{
     display: inline-block;
@@ -321,6 +343,7 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
   .destinos-col{
     width: 49%;
     margin-right: 2%;
+    margin-bottom: 2%;
     float: left;
   }
   .destinos-col:nth-child(odd){
@@ -328,6 +351,21 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
   }
   .destinos-col:first-child{
     width: 100%;
+  }
+}
+
+@media(min-width: 900px){/* De 900 em diante faz isso...*/
+  /*Destinos-col*/
+  .destinos-col:nth-child(odd),
+  .destinos-col{
+    width: 32%;
+    margin-right: 2%;
+  }
+  .destinos-col:nth-last-of-type(3n+1){
+    margin-right: 0;
+  }
+  .destinos-col:first-child{
+    width: 66%;
   }
 }
 

@@ -4,4 +4,14 @@ $(function(){
     e.preventDefault();
     $('.nav').toggleClass('active');
   });
+
+  //Fixar header
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+      $('.header').addClass('fixed');
+    }
+    else{
+      $('.header').removeClass('fixed');
+    }
+  });
 });
