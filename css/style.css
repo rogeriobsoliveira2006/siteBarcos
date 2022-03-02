@@ -251,6 +251,42 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
 
 
 /**
+* * PARALLAX
+*/
+.parallax{
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 23px;
+  padding: 160px 0;
+  margin: 60px 0;
+  background-image: url(../images/bg-paralax.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.parallax h1{
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+.parallax button{
+  background: #f9014d;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+}
+.parallax button:hover{
+  background: #e92863;
+}
+/**
 * * BREACKPOINTS MÁXIMOS
 */
 @media(max-width: 767.9px){/* De 0 até 767 faz isso...*/
