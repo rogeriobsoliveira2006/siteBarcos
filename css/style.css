@@ -13,16 +13,28 @@ a:hover{color: #f9014d;}
 * * GERAL
 */
 body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
-.header{
-  display: none;
-}
-
-/**
-* * SECTION
-*/
 .section{
   float: left;
   width: 100%;
+}
+.content{
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/**
+* * HEADER
+*/
+.header{
+  /*display: none;*/
+  position: fixed;
+  width: 100%;
+  padding-top: 25px;
+  z-index: 6;
+}
+.header .logo img{
+  max-width: 150px;
 }
 
 /**
@@ -110,7 +122,36 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
 /**
 * * BREACKPOINTS MÁXIMOS
 */
-@media(max-width: 767.9px){
+@media(max-width: 767.9px){/* De 0 até 767 faz isso...*/
+  /*Menu*/
+  .nav-toggle{
+    color: #fff;
+    font-size: 22px;
+  }
+  .nav-close{
+    font-size: 22px;
+  }
+  .header .nav.active{
+    right: 0;
+  }
+  .header .nav{
+    background: #fff;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    padding: 15px;
+    right: -100%;
+    top: 0;
+    z-index: 10;
+    transition: right .7s ease-in-out;
+  }
+  .header .nav ul li{
+    padding: 15px 5px;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /*Estatísticas*/
   .estatisticas{
     flex-direction: column;
   }
@@ -127,10 +168,32 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
 /**
 * * BREACKPOINTS MÍNIMOS
 */
-@media(min-width: 768px){
+@media(min-width: 768px){/* De 768 em diante faz isso...*/
+  /*Menu*/
+  .nav-toggle, .nav-close{
+    display: none;
+  }
+  .header .nav{
+    float: right;
+    margin-top: 20px;
+  }
+  .header .nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .header .nav ul li a{
+    color: #fff;
+  }
+  .header .nav ul li a:hover{
+    color: #f9014d;
+  }
+
+  /*Search*/
   .search-box{
     padding: 200px 0;
   }
+
+  /*Estatísticas*/
   .estatisticas{
     margin-top: -65px;
   }
@@ -144,3 +207,12 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
     border-right: 1px solid #ccc;
   }
 }
+
+/**
+* * AUXILIARES
+*/
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.fl-left{float: left;}
+.fl-right{float: right;}
