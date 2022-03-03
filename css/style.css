@@ -260,7 +260,7 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
   color: #fff;
   font-size: 23px;
   padding: 160px 0;
-  margin: 60px 0;
+  margin-top: 60px;
   background-image: url(../images/bg-paralax.jpg);
   background-size: cover;
   background-position: center;
@@ -295,6 +295,53 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
 
 }
 
+/**
+* * TESTEMUNHAS
+*/
+.testemunhas{
+  padding: 100px 0;
+  background-image: url(../images/bg-testemunhas.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.testemunhas-article{
+  float: left;
+  background: rgba(255, 255, 255, .7);
+  width: 100%;
+  font-size: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.testemunhas-article h1{
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  border-left: 8px solid #ccc;
+}
+.testemunhas-article .image{
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.testemunhas-article p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 83px;
+}
+.testemunhas-article .name{
+  color: #a70606;
+  font-weight: bold;
+}
 
 /**
 * * BREACKPOINTS MÁXIMOS
@@ -399,7 +446,7 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
     width: 100%;
   }
 
-  /*Destaques-col*/
+  /*Destaques*/
   .destaques-col{
     width: 49%;
     margin-right: 2%;
@@ -407,6 +454,16 @@ body{font-family: 'Alegreya Sans SC', sans-serif;font-size: inherit;}
     margin-bottom: 2%;
   }
   .destaques-col:nth-of-type(2n+0){
+    margin-right: 0;
+  }
+
+  /*Testemunhas*/
+  .testemunhas-article{
+    width: calc((100% - 8%) / 3);
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+  .testemunhas-article:last-of-type{
     margin-right: 0;
   }
 }
