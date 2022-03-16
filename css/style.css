@@ -1,3 +1,8 @@
+@charset "utf-8";
+@font-face{
+    font-family: 'Alegreya Sans SC';
+    src: url(../webfonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf);
+}
 /**
 * * RESET
 * ? RESET
