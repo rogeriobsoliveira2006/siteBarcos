@@ -26,7 +26,6 @@ function toggleToClassOnClick(event) {
   event.preventDefault()
   let nav = document.querySelector('nav')
   nav.classList.toggle('active')
-  console.log(event.target)
 }
 
 //Fixar header com JavaScript
