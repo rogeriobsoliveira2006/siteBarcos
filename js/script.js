@@ -1,21 +1,3 @@
-/* $(function(){
-  //Abre e fecha menu
-  $('.nav-toggle, .nav-close').click(function(e){
-    e.preventDefault();
-    $('.nav').toggleClass('active');
-  });
-
-  //Fixar header
-  $(window).scroll(function(){
-    if ($(this).scrollTop() > 100) {
-      $('.header').addClass('fixed');
-    }
-    else{
-      $('.header').removeClass('fixed');
-    }
-  });
-}); */
-
 //Abre e fecha menu com JavaScript
 var navs = document.querySelectorAll('.nav-toggle, .nav-close')
 navs.forEach(item =>{
@@ -38,3 +20,31 @@ window.onscroll = function () {
     header.classList.remove('fixed')
   }
 }
+
+var menuItems = document.querySelectorAll('.nav a[href^="#"]')
+menuItems.forEach(item => {
+  item.addEventListener('click', scrollToIdOnClick)
+})
+
+function scrollToIdOnClick(event) {
+  event.preventDefault()
+  let element = event.target
+  let id = element.getAttribute('href')
+  let to = document.querySelector(id).offsetTop
+  
+  window.scroll({
+    top: to - 100,
+    behavior: "smooth"
+  })
+}
+
+var topo = document.querySelector('.logo a')
+topo.addEventListener('click', function (event) {
+  event.preventDefault()
+  let auxTop = document.body.scrollTop
+  
+  window.scroll({
+    top: auxTop,
+    behavior: "smooth"
+  })
+})
